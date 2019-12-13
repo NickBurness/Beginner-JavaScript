@@ -53,10 +53,10 @@
     </div>
 
     <script>
-        function onTabClick(event) {
-            let activeTabs = document.querySelectorAll(".active");
+        function switchTab(event) {
+            let activeTab = document.querySelectorAll(".active");
 
-            activeTabs.forEach(function (tab) {
+            activeTab.forEach(function (tab) {
                 tab.className = tab.className.replace("active", "");
             });
 
@@ -67,7 +67,7 @@
 
         const element = document.getElementById("nav-tab");
 
-        element.addEventListener("click", onTabClick, false);
+        element.addEventListener("click", switchTab, false);
     </script>
 </body>
 
