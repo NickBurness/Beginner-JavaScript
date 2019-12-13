@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dynamic Tabs</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--Tabs-->
+        <ul class="nav" id="nav-tab">
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#second">Second</a></li>
+            <li><a href="#third">Third</a></li>
+            <li><a href="#last">Last</a></li>
+        </ul c>
+
+        <div class="tab-content">
+            <div class="pane active" id="home">
+                <h2>Home Panel</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore saepe, eaque, commodi nesciunt
+                    mollitia dolorem suscipit accusantium esse dolores ratione animi. Aliquam laborum veniam nemo
+                    repellat autem officia veritatis. Adipisci?
+                </p>
+            </div>
+            <div class="pane" id="second">
+                <h2>Second Panel</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, suscipit porro. Commodi dignissimos,
+                    in, explicabo laudantium repudiandae neque eos porro, praesentium ex quia provident numquam quidem!
+                    Tempore quo ut beatae!
+                </p>
+            </div>
+            <div class="pane" id="third">
+                <h2>Third Panel</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo labore tenetur magni aperiam, fugit
+                    ipsum fuga eos praesentium ipsa, quod velit placeat eveniet debitis dolor fugiat cumque aspernatur
+                    beatae reprehenderit.
+                </p>
+            </div>
+            <div class="pane" id="last">
+                <h2>Last Panel</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident in velit dolore! Voluptatem
+                    pariatur quos necessitatibus, architecto officia fuga, saepe dolorem fugiat, perspiciatis maiores
+                    iste? Saepe sed neque repudiandae beatae?
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function onTabClick(event) {
+            let activeTabs = document.querySelectorAll(".active");
+
+            activeTabs.forEach(function (tab) {
+                tab.className = tab.className.replace("active", "");
+            });
+
+            // activate new tab and panel
+            event.target.parentElement.className += " active";
+            document.getElementById(event.target.href.split("#")[1]).className += " active";
+        }
+
+        const element = document.getElementById("nav-tab");
+
+        element.addEventListener("click", onTabClick, false);
+    </script>
+</body>
+
+</html>
