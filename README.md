@@ -9,7 +9,7 @@ A repository completely dedicated to building on my own understanding of JavaScr
 ##### Commit files to Github repository
 
     git commit -m "message here" (message is optional, but good practice)  
-###### Push files to repository
+##### Push files to repository
 
     git push -u origin master --> enter password
 ##### Check status of repository
