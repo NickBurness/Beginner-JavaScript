@@ -1,0 +1,23 @@
+.container {
+    margin: 0 auto;
+}
+.view {
+    padding-right: 0.25%;
+    text-align: right;
+    width: 21%;
+    font-size: 2em;
+}
+
+button {
+    cursor: pointer;
+    width: 5%;
+    height: 5%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.9);
+}

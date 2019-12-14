@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="view" id="view">0</div>
+        <button class="clear" id="clear">C</button>
+
+        <div class="row">
+            <button class="number" data-number="9">9</button>
+            <button class="number" data-number="8">8</button>
+            <button class="number" data-number="7">7</button>
+            <button class="operator" data-operator="plus">+</button>
+        </div>
+
+        <div class="row">
+            <button class="number" data-number="6">6</button>
+            <button class="number" data-number="5">5</button>
+            <button class="number" data-number="4">4</button>
+            <button class="operator" data-operator="minus">-</button>
+        </div>
+
+        <div class="row">
+            <button class="number" data-number="3">3</button>
+            <button class="number" data-number="2">2</button>
+            <button class="number" data-number="1">1</button>
+            <button class="operator" data-operator="multiply">*</button>
+        </div>
+
+        <div class="row">
+            <button class="number" data-number="0">0</button>
+            <button class="number" data-number=".">.</button>
+            <button class="equals" data-result="" id="equals">=</button>
+            <button class="operator" data-operator="divide">/</button>
+        </div>
+    </div>
+
+    <script src="function.js" type="text/JavaScript"></script>
+</body>
+
+</html>
