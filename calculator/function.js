@@ -54,6 +54,12 @@ const displayNum = function () {
         case "divide":
             resultNum = oldNum / theNum;
             break;
+        case "squareRoot":
+            resultNum = Math.sqrt(theNum);
+            break;
+        case "power":
+            resultNum = Math.pow(oldNum, theNum);
+            break;
         default:
             resultNum = theNum;
     }

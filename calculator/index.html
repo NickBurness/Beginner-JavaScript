@@ -13,7 +13,14 @@
     <div class="container">
 
         <div class="view" id="view">0</div>
-        <button class="clear" id="clear">C</button>
+
+        <div class="row">
+            <button class="clear" id="clear">C</button>
+            <button class="operator" data-operator="squareRoot">√</button>
+            <button class="operator" data-operator="power">^</button>
+            <button class="operator" data-operator="divide">/</button>
+        </div>
+
 
         <div class="row">
             <button class="number" data-number="9">9</button>
@@ -38,9 +45,8 @@
 
         <div class="row">
             <button class="number" data-number="0">0</button>
-            <button class="number" data-number=".">.</button>
+            <button class="number point" data-number=".">.</button>
             <button class="equals" data-result="" id="equals">=</button>
-            <button class="operator" data-operator="divide">/</button>
         </div>
     </div>
 
