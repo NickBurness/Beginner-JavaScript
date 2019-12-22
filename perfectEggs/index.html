@@ -6,27 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Perfect 🥚🍳's</title>
+    <title>Cook the perfect 🥚</title>
 </head>
 
 <body>
-
-    <p>Using large hens' eggs at room temperature, then lowered into boiling water.</p>
-    <p>When done, scoop the eggs out of the pan.</p>
-    <p>If you’re not eating them straight away, place them into a bowl of cold water to prevent them cooking any
-        further. </p>
-    <p>Set your timer, cook your eggs!</p>
-
     <div class="container">
-        <input type="range" min="5" max="10" value="7" class="slider" id="myEggs">
-        <p><span id="timerValue"></span> Minutes</p>
-    </div>
-    <div class="display">
-        <h1 class="display_time-left"></h1>
-        <p class="display_end-time"></p>
+        <h1>This is no yolk, I help <u>you</u> make the best 🥚's!</h1>
+        <p><b class="bold">1)</b> Use large hens' eggs starting at room temperature.</p>
+        <p><b class="bold">2)</b> Boil a pan of water... When the water is boiling, move to the next step.</p>
+        <p><b class="bold">3)</b> Select the button to start the timer for the type of eggs you want.</p>
+        <p><b class="bold">4)</b> Put your eggs into the boiling water, when the timers up, scoop 'em out!</p>
+        <p><b class="bold">5)</b> Place eggs into a bowl of cold water after to prevent them cooking further.</p>
+
+        <div class="timer_buttons">
+            <button class="" data-time="300"><b>Runny Soft</b></button>
+            <button class="" data-time="360"><b>Soft</b></button>
+            <button class="" data-time="420"><b>Medium soft</b></button>
+            <button class="" data-time="480"><b>Medium</b></button>
+            <button class="" data-time="540"><b>Medium hard</b></button>
+            <button class="" data-time="600"><b>Hard</b></button>
+        </div>
+        <div class="display">
+            <h1 class="display_time-left">🍳</h1>
+            <p class="display_end-time"></p>
+        </div>
     </div>
 
     <script src="script.js" type="text/Javascript"></script>
+
 </body>
 
 </html>

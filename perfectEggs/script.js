@@ -1,14 +1,7 @@
 let countdown;
 const timerDisplay = document.querySelector('.display_time-left');
 const endTime = document.querySelector('.display_end-time');
-const slider = document.getElementById("myEggs");
-const setTimer = document.getElementById("timerValue");
-setTimer.innerHTML = slider.value; // Display the default slider value
-
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function () {
-    output.innerHTML = this.value;
-}
+const buttons = document.querySelectorAll('[data-time]');
 
 function timer(seconds) {
     clearInterval(countdown);
@@ -29,7 +22,6 @@ function timer(seconds) {
     }, 1000);
 }
 
-// Countdown timer
 function displayTimeLeft(seconds) {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
@@ -38,12 +30,16 @@ function displayTimeLeft(seconds) {
     timerDisplay.textContent = display;
 }
 
-/// display time eggs will finish
 function displayEndTime(timestamp) {
     const end = new Date(timestamp);
     const hour = end.getHours();
     const minutes = end.getMinutes();
-    endTime.textContent = `Eggs will be perfectly cooked at ${hour}:${minutes < 10 ? '0' : ''}${minutes}`;
+    endTime.textContent = `Your eggs will be ready at ${hour}:${minutes < 10 ? '0' : ''}${minutes}`;
 }
 
-setTimer.forEach(button => button.addEventListener('click', startTimer));
+function startTimer() {
+    const seconds = parseInt(this.dataset.time);
+    timer(seconds);
+}
+
+buttons.forEach(button => button.addEventListener('click', startTimer));

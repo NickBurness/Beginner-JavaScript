@@ -1,7 +1,38 @@
-body {
-    background-color: #ffffff;
+@font-face {
+    font-family: 'Indie Flower';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Indie Flower'), local('IndieFlower'), url(https://fonts.gstatic.com/s/indieflower/v11/m8JVjfNVeKWVnh3QMuKkFcZVaUuH.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+*,
+*::before,
+*::after {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', sans-serif;
+}
+
+body {
+    background-color: #ffd79a;
+}
+
+h1 {
+    margin-top: 2.5vh;
+    font-size: 2.5em;
+}
+
+p {
+    font-family: sans-serif;
+    padding-top: 0.25%;
+    font-size: 1.25em;
+}
+
+b {
+    font-size: 1.5em;
 }
 
 .container {
@@ -9,17 +40,34 @@ body {
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
-input[type="range"]::-webkit-slider-thumb,
-input[type="range"]::-moz-range-thumb {
-    -webkit-appearance: none;
-    height: 30px;
-    width: 30px;
-    background-color: #eeff00;
-    border-radius: 50%;
-    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+button {
+    background: #fffcec;
+    border: none;
+    width: 7.5vw;
+    height: 20vh;
+    margin: .5em;
+    margin-top: 2em;
+    padding: .5em;
+    vertical-align: middle;
+    color: #000;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    transition: 0.5s;
+}
+
+button:hover {
+    border: 1px solid #000;
+    transform: scale(1.2);
+}
+
+.display {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.display_end-time {
+    font-size: 2em;
 }
