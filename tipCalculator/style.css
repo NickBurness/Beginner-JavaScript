@@ -1,0 +1,31 @@
+*,
+*::before,
+**::after {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {}
+
+form input[type="text"],
+form input[type="number"],
+.service {
+    width: 150px;
+    text-align: center;
+}
+
+button {
+    text-align: center;
+    border: none;
+    box-shadow: 0px 0px 5px #000;
+    width: 100px;
+}
+
+button:hover {}
