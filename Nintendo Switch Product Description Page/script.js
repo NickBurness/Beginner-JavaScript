@@ -5,7 +5,7 @@ function openPane(event) {
         tab.className = tab.className.replace("active", "");
     });
 
-    // activate new tab and display panel
+    // activate and display pane
     event.target.parentElement.className += " active";
     document.getElementById(event.target.href.split("#")[1]).className += " active";
 }
@@ -13,5 +13,3 @@ function openPane(event) {
 const element = document.getElementById("button-tab");
 
 element.addEventListener("click", openPane, false);
-
-console.log(openPane);

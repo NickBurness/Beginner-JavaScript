@@ -69,6 +69,7 @@ button {
     border: solid var(--nintendo-switch-grey);
     border-width: 3vw 5vh 3vw 5vh;
     border-radius: 5px;
+    overflow: auto;
 }
 
 .info-screen-wrapper {
@@ -76,6 +77,7 @@ button {
     width: 100%;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
 
 .buttons {
@@ -90,7 +92,8 @@ a {
     color: white;
     border: 2px solid #000;
     border-top-width: 5px;
-    border-radius: 0px 0px 10px 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     text-decoration: none;
     text-align: center;
     margin-bottom: 2.5%;
@@ -112,11 +115,60 @@ a:hover {
     transform: scale(1.2);
 }
 
+a:active {
+    transform: scale(0.9);
+}
+
 /* script.js function styles */
 .pane {
     display: none;
 }
 
-.active {
-    display: block;
+.pane.active {
+    display: flex;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow: auto;
+}
+
+table td {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 1px;
+    word-break: normal;
+    border-color: white
+}
+
+table th {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 1px;
+    word-break: normal;
+    border-color: white;
+}
+
+.starter-cell {
+    background-color: #9698ed;
+}
+
+.blank-cell {
+    background-color: #fd696494;
+}
+
+.detail {
+    text-align: left;
+    vertical-align: top
+}
+
+.product-detail {
+    font-weight: bold;
+    text-align: center;
+    vertical-align: center;
 }
