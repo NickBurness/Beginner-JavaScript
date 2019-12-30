@@ -37,11 +37,14 @@
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 75px;
+    width: 100%;
+    justify-content: center;
+    align-self: center;
     text-align: center;
-    background-color: transparent;
     color: white;
 }
+
 h1 span {
     font-weight: 100;
 }
@@ -62,7 +65,7 @@ button:nth-child(3) {
     background-color: var(--nintendo-switch-red);
     border: 2px solid #000;
     border-top-width: 5px;
-    
+
 }
 
 button {
@@ -96,4 +99,12 @@ button:hover {
     width: 100vw;
     justify-content: center;
     align-items: center;
+}
+
+.pane {
+    display: none;
+}
+
+.pane .active {
+    display: block;
 }
